@@ -55,6 +55,7 @@ function play(userOption){
 
 
 window.addEventListener("load", ()=>{
+    alert("Introduce tu nombre para iniciar la partida! :)")
     initialize();
     setListeners();
 
