@@ -8,29 +8,33 @@
 .container {
     padding: 10px;
     max-width: 800px;
-    margin: 0 auto;
+    margin:  auto;
     height: 100vh;
     max-height: 750px;
     background-color: rgb(3, 156, 156);
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
     border: 1px solid;
+    
 }
 
 #group-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
+    
+    width: 30%;
+    text-align: left;
+    display: inline-block;
 }
 #group-btn > button > img {
-    width: 100%;
+    width: 70%;
+    height: 70%;
 }
 #init {
     text-align: center;
 }
 
 #form-init{
+    width: 30%;
     font-size: 26px;
     text-align: center;
     padding: 10px;
@@ -43,3 +47,32 @@ h1 {
     font-size: 25px;
     padding: 10px;
 }
+
+#start-text {
+    font-size: 26px;
+    text-align: center;
+    padding: 40px;
+}
+
+#result {
+    width: 50;
+    text-align: center;
+    display: inline-block;
+}
+#result img {
+    margin-top: 10px;
+    width: 20%;
+}
+ #machine-selection {
+   
+    display: inline-block;
+    
+    
+ }
+
+ #machine-selection img {
+    width: 80% ;
+    height: 80%;
+    display: inline-block;
+    text-align: right;
+ }

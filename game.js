@@ -1,8 +1,8 @@
-  const ROCK = 0;
-  const PAPER = 1;
-  const SZISSORS = 2;
-  const LIZARD = 3;
-  const SPOCK = 4;
+  let ROCK = "rock";
+  let PAPER = "paper";
+  let SCISSORS = "scissors";
+  let LIZARD = "lizard";
+  let SPOCK = "spock";
 
   const WIN = 0;
   const LOST = 1;
@@ -13,9 +13,11 @@
   let scizorsBtn;
   let lizardBtn;
   let spockBtn;
-    
-    
+  let resultText;
+  let userImg;
+  let machineImg;
 
+  let machineOption = 0;
     
 function initialize(){
     rockBtn = document.getElementById("rock");
@@ -23,7 +25,11 @@ function initialize(){
     scizorsBtn = document.getElementById("scissors");
     lizardBtn = document.getElementById("lizard");
     spockBtn = document.getElementById("spock");
-   
+
+    resultText = document.getElementById("start-text");
+    userImg = document.getElementById("user-img");
+    machineImg = document.getElementById("machine-img");
+
 
 }
 
@@ -35,7 +41,7 @@ function setListeners() {
         play(PAPER);
     });
     scizorsBtn.addEventListener("click", ()=>{
-        play(SZISSORS);
+        play(SCISSORS);
     });
     lizardBtn.addEventListener("click", ()=>{
         play(LIZARD);
@@ -44,19 +50,157 @@ function setListeners() {
         play(SPOCK);
     });
 }
+
+function calcMachineOption() {
+    let option = Math.floor(Math.random() * 5);
+
+    switch (option) {
+        case 0:
+            return ROCK;
+        case 1:
+            return PAPER;
+        case 2:
+            return SCISSORS;
+        case 3:
+            return LIZARD;
+        case 4:
+            return SPOCK;
+       
+    }
+}
 function play(userOption){
-    const machineOption = Math.floor(Math.random() * 5);
-    console.log(machineOption);
+
+    machineOption = calcMachineOption();
+    const result = calcResult(userOption, machineOption);
+
+    userImg.src = "img/"+ userOption +".png";
+    machineImg.src ="img/"+ machineOption + ".png";
+        switch(result){
+            case TIE:
+                resultText.innerHTML = "You have tied";
+                break;
+            case WIN:
+                resultText.innerHTML = "you win! :) ";
+                break;
+            case LOST:
+                resultText.innerHTML = "you lost :(";
+                break;
+        }
+    }
+
+function calcResult (userOption, machineOption) {
 
     if(userOption === machineOption) {
         return TIE;
+
+    }else if (userOption === ROCK) {
+
+        if(machineOption === PAPER) return LOST;
+        if(machineOption === SCISSORS) return WIN;
+        if(machineOption === LIZARD) return WIN;
+        if(machineOption === SPOCK) return LOST;
+
+    } else if (userOption === PAPER) {
+
+        if(machineOption === ROCK) return WIN;
+        if(machineOption === SCISSORS) return LOST;
+        if(machineOption === LIZARD) return LOST;
+        if(machineOption === SPOCK) return WIN;
+
+    } else if(userOption === SCISSORS) {
+
+        if(machineOption === ROCK) return LOST;
+        if(machineOption === PAPER) return WIN;
+        if(machineOption === LIZARD) return WIN;
+        if(machineOption === SPOCK) return LOST;
+
+    }else if(userOption === LIZARD) {
+
+        if(machineOption === ROCK) return LOST;
+        if(machineOption === SCISSORS) return LOST;
+        if(machineOption === PAPER) return WIN;
+        if(machineOption === SPOCK) return WIN;
+
+    }else if (userOption === SPOCK){
+
+        if(machineOption === ROCK) return WIN;
+        if(machineOption === SCISSORS) return WIN;
+        if(machineOption === LIZARD) return LOST;
+        if(machineOption === PAPER) return LOST;
+
     }
 }
+
+/*
+    switch (userOption){
+
+    case 1: (userOption === machineOption);
+    return TIE;
+    break;
+
+    case 2: (userOption === ROCK && machineOption === PAPER);
+    return LOST;
+    break;
+    
+    case 3: (userOption === ROCK && machineOption === SZISSORS);
+    return WIN;
+    break;
+
+    case 4: (userOption === ROCK && machineOption === LIZARD);
+    return WIN;
+    break;
+
+    case 5: (userOption === ROCK && machineOption === SPOCK);
+    return LOST;
+    break;
+
+    case 6: (userOption === PAPER && machineOption === ROCK);
+    return WIN;
+    break;
+
+    case 7: (userOption === PAPER && machineOption === LIZARD);
+    return LOST;
+    break;
+
+    case 8: (userOption === PAPER && machineOption === SPOCK);
+    return WIN;
+    break;
+
+    case 9: (userOption === PAPER && machineOption === SZISSORS);
+    return LOST;
+    break;
+
+    case 10: (userOption === SZISSORS && machineOption === PAPER);
+    return WIN;
+    break;
+
+    case 11: (userOption === SZISSORS && machineOption === PAPER);
+    return WIN;
+    break;
+
+    case 12: (userOption === SZISSORS && machineOption === PAPER);
+    return WIN;
+    break;
+
+    case 13: (userOption === SZISSORS && machineOption === PAPER);
+    return WIN;
+    break;
+
+
+    case 8: (userOption === PAPER && machineOption === SZISSORS);
+    return LOST;
+    break;
+
+    //case 9: (userOption === );
+    }
+    */
+
 
 
 window.addEventListener("load", ()=>{
     alert("Introduce tu nombre para iniciar la partida! :)")
     initialize();
     setListeners();
+    calcResult();
 
 });
