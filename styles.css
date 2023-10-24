@@ -10,7 +10,7 @@
     max-width: 800px;
     margin:  auto;
     height: 100vh;
-    max-height: 750px;
+    max-height: 800px;
     background-color: rgb(3, 156, 156);
     flex-direction: column;
     justify-content: flex;
@@ -20,11 +20,13 @@
 }
 
 #group-btn {
-    
-    width: 30%;
-    text-align: left;
+    position: static;
+    width: 34%;
+    text-align: center;
     display: inline-block;
+    height: 30%;
 }
+
 #group-btn > button > img {
     width: 70%;
     height: 70%;
@@ -34,7 +36,7 @@
 }
 
 #form-init{
-    width: 30%;
+    width: 100%;
     font-size: 26px;
     text-align: center;
     padding: 10px;
@@ -55,24 +57,33 @@ h1 {
 }
 
 #result {
-    width: 50;
+    margin-right: 10px;
+    width: 33%;
     text-align: center;
     display: inline-block;
+    
 }
 #result img {
-    margin-top: 10px;
-    width: 20%;
+    max-width: 80%;
+    width: 90%;
+    height:100%;
 }
  #machine-selection {
-   
+    width: 20%;
+    height: 19%;
     display: inline-block;
+    text-align: right;
+
     
     
  }
 
  #machine-selection img {
-    width: 80% ;
-    height: 80%;
+    
+    width: 120px ;
+    height: 110px;
     display: inline-block;
     text-align: right;
+    position: static;
+   
  }

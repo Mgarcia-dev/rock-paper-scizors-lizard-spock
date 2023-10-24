@@ -9,21 +9,18 @@
 
 </head>
 <body>
-    
+    <div id="form-init">
+        <form>
+            <label id="start.text">Introduce your name to begin:</label>
+            <input type="name" id="init">
+            <small id="error-message">Introduce un nombre válido!</small>
+            <button type="button" id="initButton">Comenzar!</button><br><br>
+        </form>
+    </div>
     <div class="container">
         <h1>Welcome to Rock, paper, scizors, lizard, spock  </h1>
-
-        
-        <div id="form-init">
-            <form>
-                <label id="start.text">Introduce your name to begin:</label>
-                <input type="name" id="init">
-                <small id="error-message">Introduce un nombre válido!</small>
-                <button type="button" id="initButton">Comenzar!</button><br><br>
-            </form>
-        </div>
-
         <div id="group-btn">
+            <h3>Your option</h3>
             <button id="rock" type="button">
                 <img src="img/rock.png"/>
                 <br>
@@ -42,9 +39,9 @@
                 <img src="img/spock.png"/>
             </button>
         </div>
-
+   
         <div id="result">
-            <div id="start-text">Choose an option to play! </div>
+            <div id="start-text"><h1>Choose an option to play! </h1></div>
             <img id="user-img" src="img/rock.png"><br><br>
             <img id="machine-img" src="img/rock.png">
             
@@ -52,6 +49,7 @@
         </div>
 
         <div id="machine-selection">
+            <h3>Machine option</h3>
             <img src="img/rock.png"><br>
             <img src="img/paper.png"><br>
             <img src="img/scissors.png"><br>

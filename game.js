@@ -77,13 +77,13 @@ function play(userOption){
     machineImg.src ="img/"+ machineOption + ".png";
         switch(result){
             case TIE:
-                resultText.innerHTML = "You have tied";
+                resultText.innerHTML = "<h2>Tied &#128528;<h2>";
                 break;
             case WIN:
-                resultText.innerHTML = "you win! :) ";
+                resultText.innerHTML = "<h2> You win! &#128512; <h2> ";
                 break;
             case LOST:
-                resultText.innerHTML = "you lost :(";
+                resultText.innerHTML = "<h2>You lost &#129394; <h2> ";
                 break;
         }
     }
@@ -95,7 +95,7 @@ function calcResult (userOption, machineOption) {
 
     }else if (userOption === ROCK) {
 
-        if(machineOption === PAPER) return LOST;
+        if(machineOption === PAPER)return LOST;
         if(machineOption === SCISSORS) return WIN;
         if(machineOption === LIZARD) return WIN;
         if(machineOption === SPOCK) return LOST;
