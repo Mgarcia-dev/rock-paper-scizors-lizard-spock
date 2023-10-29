@@ -5,7 +5,7 @@ AE.1- Piedra, papel, tijera, lagarto, spock
 En primer lugar, se ha añadido un icono con la imagen de spock en la pestaña 
 de la página.
 
-
+https://github.com/Mgarcia-dev/rock-paper-scizors-lizard-spock/blob/main/img/icon.jpg
 
 A continuación vemos en pantalla como se nos presenta la pantalla principal del juego
 donde solo hay un título y se nos pide que introduzcamos nuestro nombre para 
