@@ -11,45 +11,51 @@
 <body>
     <div id="form-init">
         <form>
-            <label id="start.text">Introduce your name to begin:</label>
+            <p><h1>Welcome to Rock, paper, scizors, lizard, spock  </h1></p>
+            <label id="introduction">Introduce your name to begin:</label>
             <input type="name" id="init">
-            <small id="error-message">Introduce un nombre válido!</small>
-            <button type="button" id="initButton">Comenzar!</button><br><br>
+            <button type="button" id="initButton" disabled="">Comenzar!</button>
+            <small id="error-message"></small><br><br>
         </form>
     </div>
-    <div class="container">
-        <h1>Welcome to Rock, paper, scizors, lizard, spock  </h1>
-        <div id="group-btn">
-            <h3>Your option</h3>
-            <button id="rock" type="button">
+    <div class="container container1" id="container">
+        
+        <div  id="group-btn">
+            <div id="userText"><h3></h3></div>
+            <h3 id="user-Points">0</h3>
+            <button class="userButton" id="rock" type="button" disabled="" >
                 <img src="img/rock.png"/>
                 <br>
             </button>
-            <button id="paper" type="button">
+            <button class="userButton" id="paper" type="button" disabled="">
                 <img src="img/paper.png"/>
+                
+            </button>
+            <button  class="userButton" id="scissors" type="button" disabled="" >
+                <img src="img/scissors.png"/>
                 <br>
             </button>
-            <button id="scissors" type="button">
-                <img src="img/scissors.png"/>
-            </button>
-            <button id="lizard" type="button">
+            <button class="userButton" id="lizard" type="button" disabled="">
                 <img src="img/lizard.png"/>
-            </button>
-            <button id="spock" type="button">
+                <br>
+            </button >
+            <button class="userButton" id="spock" type="button" disabled="">
                 <img src="img/spock.png"/>
+
             </button>
         </div>
    
         <div id="result">
-            <div id="start-text"><h1>Choose an option to play! </h1></div>
-            <img id="user-img" src="img/rock.png"><br><br>
-            <img id="machine-img" src="img/rock.png">
-            
+            <div id="start-text"><h1>Choose an option to play! </h1></div>          
+            <img id="user-img" src="img/rock.png"><br><br><br><br><br>
+            <img id="machine-img" src="img/rock.png"><br><br>
+            <div id="result-text"><h1></h1></div>
 
         </div>
 
         <div id="machine-selection">
-            <h3>Machine option</h3>
+            <h3 id="machine-name"></h3>
+            <h3 id="machine-Points">0</h3>
             <img src="img/rock.png"><br>
             <img src="img/paper.png"><br>
             <img src="img/scissors.png"><br>
@@ -57,11 +63,7 @@
             <img src="img/spock.png"><br>
             
         </div>
-
-        
-
-
-
+        <button class="btnReiniciar disabled" id="restart" >Reiniciar</button>
     </div>
 </body>
 </html>
