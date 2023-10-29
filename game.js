@@ -289,12 +289,12 @@
     function resultGame() {
         if(userPoints === 5 || machinePoints === 5) {
             if(userPoints === 5){
-            startText.innerHTML = " <h3> HAS GANADO LA PARTIDA ! </h3>";
+            startText.innerHTML = " <h3> You're the winner ! &#128512; </h3>";
             resultText.innerHTML = "";
             }
             
             if(machinePoints === 5) {
-                startText.innerHTML = " <h3>Has perdido, vuelve a intentarlo! </h3>";
+                startText.innerHTML = " <h3>You have lost, try again ! &#129394 </h3>";
                 resultText.innerHTML ="";
             }
 
