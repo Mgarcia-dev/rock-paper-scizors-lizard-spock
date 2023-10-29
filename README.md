@@ -5,13 +5,13 @@ AE.1- Piedra, papel, tijera, lagarto, spock
 En primer lugar, se ha añadido un icono con la imagen de spock en la pestaña 
 de la página.
 
-"img/icon.png"
+
 
 A continuación vemos en pantalla como se nos presenta la pantalla principal del juego
 donde solo hay un título y se nos pide que introduzcamos nuestro nombre para 
 comenzar a jugar. El botón no se activa hasta que introducimos el nombre.
 
-"img/first.png"
+
 
 Una vez introducimos el nombre, se nos activa el display del juego, nos muestra los 
 botones del jugador, los del rival y en medio los resultados de cada uno.
